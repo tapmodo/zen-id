@@ -1,7 +1,7 @@
 {
   "name": "zen-id",
   "version": "0.1.1",
-  "description": "generate random strings by pattern, including checksums and verification",
+  "description": "generate random strings by pattern, including checksums and validation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
