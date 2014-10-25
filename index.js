@@ -50,7 +50,12 @@ ZenID.prototype = {
 
     for(var i=0, l=data.length; i<l; i++){
       if (format[i] == 'c') out.push(null);
-      else if (this.formats[format[i]]) out.push(data[i]);
+
+      else if (
+        this.formats[format[i]] &&
+        (this.formats[format[i]].indexOf(data[i]) != -1)
+      ) out.push(data[i]);
+
       else if (format[i] == data[i]) out.push(data[i]);
     }
 
