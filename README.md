@@ -18,8 +18,8 @@ Use npm:
 ### Basic Usage
 
 The goal for this code is to be as flexible as possible. There are a number
-of different ways it can be used. I hope to expand on the "usage" section
-over time, but for now I suggest reading the (short) code to learn more.
+of different ways it can be used. Hopefully the "usage" section will be expanded
+in the future, but read the (short) code to learn more in the meantime.
 
 ```javascript
 var format = 'AAAaaacchhhcc';
@@ -31,6 +31,9 @@ var is_valid = zen_id.validate(my_id);          // => true
 
 ### Formats
 
+The constructor and most of the fuctions accept a format string
+composed of characters from the following table:
+
 | Character | Range | Description |
 | --------- | ----- | ----------- |
 | n | 0-9 | numeric |
@@ -40,7 +43,7 @@ var is_valid = zen_id.validate(my_id);          // => true
 | x | 0-9a-z | numeric or lowercase a-z |
 | X | 0-9A-Za-z | numeric or a-z any case |
 | z | A-Za-z | a-z any case |
-| c | - | checksum character |
+| c | - | **checksum character** |
 
 Any non-format character is repeated verbatim in the output.
 
