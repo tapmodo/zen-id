@@ -41,7 +41,28 @@ var is_valid = zen_id.validate(my_id);
 | z | A-Za-z | a-z any case |
 | c | - | checksum character |
 
-Any other character is repeated verbatim in the output.
+Any non-format character is repeated verbatim in the output.
+
+### Validation
+
+The `validate(id)` method can be used to check if a value
+*matches the format pattern*. Can be useful comparing any pattern,
+but possibly most useful with checksums. See following section.
+
+### Checksums
+
+Checksums are character values applied to certain output positions based on
+the random (pattern) input up to that point. Checksums are also valuable to
+detect input errors.
+
+Checksums are not infallible, nor is this packages's caluation method so
+fixed that you could assume previously generated IDs would validate against
+the same format in the future. At least in the early stages, the calculation
+method is subject to change.
+
+Checksums are best used to detect a situation where an apparently invalid
+code was entered based on the format, not as an ultimate test of whether the
+code was ever issued, or not.
 
 ### Credits and Notes
 
