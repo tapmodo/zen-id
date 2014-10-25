@@ -24,8 +24,9 @@ over time, but for now I suggest reading the (short) code to learn more.
 ```javascript
 var format = 'AAAaaacchhhcc';
 var zen_id = require('zen-id').create(format);
-var my_id = zen_id.generate();
-var is_valid = zen_id.validate(my_id);
+
+var my_id = zen_id.generate();                  // => 'HYKzbk7473e99'
+var is_valid = zen_id.validate(my_id);          // => true
 ```
 
 ### Formats
