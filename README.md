@@ -12,6 +12,7 @@ Some notes about this code:
 ### Installation
 
 Use npm:
+
     npm install zen-id
 
 ### Basic Usage
@@ -38,6 +39,9 @@ var is_valid = zen_id.validate(my_id);
 | x | 0-9a-z | numeric or lowercase a-z |
 | X | 0-9A-Za-z | numeric or a-z any case |
 | z | A-Za-z | a-z any case |
+| c | - | checksum character |
+
+Any other character is repeated verbatim in the output.
 
 ### Credits and Notes
 
