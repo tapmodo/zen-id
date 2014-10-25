@@ -9,7 +9,7 @@ var crc = require('crc');
 
 // Constructor
 var ZenID = function(format){
-  this.format = format;
+  this.setFormat(format);
   this.init();
 };
 
@@ -22,6 +22,12 @@ ZenID.prototype = {
     for(key in ZenID.formats)
       if (ZenID.formats.hasOwnProperty(key))
         this.formats[key] = ZenID.shuffle(ZenID.formats[key]);
+  },
+
+  // Set the format
+  setFormat: function(format){
+    this.format = format;
+    return this;
   },
 
   // Translate a format character into a random value
