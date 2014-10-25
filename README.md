@@ -4,7 +4,7 @@ zen-id
 **Generate random strings by pattern, including checksums and validation.**
 
 Some notes about this code:
-  * Conceptually based on [gen-id](/domudall/gen-id) package by [domudall](/domudall/) 
+  * Conceptually based on [gen-id](/domudall/gen-id) package by [domudall](@domudall) 
   * No guarantees of complete uniqueness, but longer patterns should be ok
   * Written for nodejs, but could be adapted to other Javascript environments
   * This is my first published npm package, be nice
